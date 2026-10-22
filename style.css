@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+    background: #1e293b;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #f8fafc;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem;
+    background: #0f172a;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.highlight {
+    color: #38bdf8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1.2rem;
+    padding: 0.6rem 1.2rem;
+    background: #38bdf8;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Sections */
+.section {
+    padding: 3rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section.dark {
+    background: #1e293b;
+    max-width: 100%;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #38bdf8;
+}
+
+/* Grids */
+.skills-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: #334155;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #020617;
+    font-size: 0.9rem;
+}/* Contact Buttons Container */
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+/* Base button adjustment */
+.contact-buttons .btn {
+    margin-top: 0;
+}
+
+/* Phone Button Colors */
+.btn-phone {
+    background: #0284c7;
+    color: #ffffff;
+}
+
+.btn-phone:hover {
+    background: #0369a1;
+}
+
+/* WhatsApp Button Colors */
+.btn-whatsapp {
+    background: #25d366;
+    color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+}/* Hero Profile Image Styling */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    /* Adjusts vertical focus to show your head and torso clearly */
+    object-position: 50% 15%; 
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}/* Hero Container Setup */
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Adjust height of the hero block */
+    overflow: hidden; /* Keeps images neatly contained */
+    padding: 0 2rem;
+}
+
+/* Center Content Area */
+.hero-content {
+    z-index: 2;
+    text-align: center;
+}
+
+/* Side Images - Full Height Touching Top & Bottom */
+.side-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%; /* Spans top to bottom of hero section */
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none; /* Allows text/buttons to stay clickable */
+}
+
+/* Position Left Image */
+.left-img {
+    left: 2rem;
+}
+
+/* Position Right Image */
+.right-img {
+    right: 2rem;
+}
+
+/* Hide side images on mobile screens so it stays clean */
+@media (max-width: 900px) {
+    .side-img {
+        display: none;
+    }
+}/* Side Images - Full Height Touching Top & Bottom */
+.side-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+    
+    /* Blends edges into the dark background and removes sharp borders */
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+/* Optional: Slight opacity adjustment so it blends with your theme */
+.left-img, .right-img {
+    opacity: 0.85;
+}.side-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.left-img {
+    left: 2rem;
+}
+
+.right-img {
+    right: 2rem;
+}/* Center Circle Profile Picture */
+.profile-img {
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    background-color: #0d1527; /* Matches your background color */
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+/* Side Standing Images */
+.side-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+
+    /* Smoothly fades out the sharp top and bottom edges */
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+}
+
+.left-img {
+    left: 2rem;
+}
+
+.right-img {
+    right: 2rem;
+}
+
+/* Hide side images on mobile screens for a clean responsive layout */
+@media (max-width: 900px) {
+    .side-img {
+        display: none;
+    }
+}/* Side Standing Images - Smooth 4-Way Edge Fade */
+.side-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+
+    /* Blends all 4 edges (top, bottom, left, right) softly into the dark background */
+    mask-image: 
+        linear-gradient(to bottom, transparent, black 12%, black 88%, transparent),
+        linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-composite: intersect;
+    -webkit-mask-image: 
+        linear-gradient(to bottom, transparent, black 12%, black 88%, transparent),
+        linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-composite: source-in;
+}
+
+.left-img {
+    left: 1rem;
+}
+
+.right-img {
+    right: 1rem;
+}/* Side Standing Images - Blended Below Background Color */
+.side-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    z-index: 1;
+    pointer-events: none;
+    
+    /* Blends dark colors through and hides white/light pixels */
+    mix-blend-mode: multiply;
+    opacity: 0.85;
+
+    /* Smoothly fades the edges top, bottom, left, and right */
+    mask-image: 
+        linear-gradient(to bottom, transparent, black 10%, black 90%, transparent),
+        linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-composite: intersect;
+    -webkit-mask-image: 
+        linear-gradient(to bottom, transparent, black 10%, black 90%, transparent),
+        linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-composite: source-in;
+}
+
+.left-img {
+    left: 1rem;
+}
+
+.right-img {
+    right: 1rem;
+}
